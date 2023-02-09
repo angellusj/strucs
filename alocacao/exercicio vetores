@@ -1,19 +1,20 @@
 #include<stdio.h>
 #include<stdlib.h>
-
-void identidade(char masc, char fem){
-	char *mf=(char*)malloc(2*sizeof(char));
-}
+#include<locale.h>
 
 int main (void){
-	int cont, numero_pessoas;
-	char m, f;
-	printf("Quantas pessoas participaram do questionario?\n");
-	scanf("%d", &numero_pessoas);
-	printf("Informe o sexo dos entrevistados: \n");
-	for(cont=0; cont<numero_pessoas;cont++){
-		identidade(m, f);
-		scanf("%s", &identidade);
-	}
-	
+	setlocale(LC_ALL, "portuguese");
+	int number_person, i;
+	char identidade_genero[200], opiniao[200];
+	printf("Quantas pessoas participaram do evento? \n");
+	scanf("%d", &number_person);
+	for(i=0;i<number_person;i++){
+	    printf("Informe a indentidade de genero do %dº entrevistado:\n", i+1);
+	    scanf("%[ ^\n]s", identidade_genero);
+	    }
+	    for(i=0;i<number_person;i++){
+	        printf("Sua opiniao sobre o produto: \n");
+            scanf("%[ ^\n]s", opiniao);
+            }
+    
 }
